@@ -11,7 +11,7 @@ to find the right balance.
 
 ## Dataset
 - **Source:** UCI Online Retail II dataset
-- **Size:** ~1 million transactions across 2 years (2009–2011)
+- **Size:** 1 million transactions across 2 years (2009–2011)
 - **Details:** Real UK-based online retail transactions, including 
                product codes, quantities, prices, and dates
 
