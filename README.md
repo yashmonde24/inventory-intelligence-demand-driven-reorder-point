@@ -50,10 +50,26 @@ in analytics projects.
 - Excel (source data)
 
 ## Key Insight
-A small percentage of products (Category A) drive the majority of revenue. 
-These products need the tightest reorder accuracy, since stockouts here 
-are the most costly.
+- **4,746 SKUs** analyzed across £27.56M in total revenue
+- **25% of SKUs (Category A, 1,171 products)** generated **80% of revenue 
+  (£22.05M)** — a small share of the catalog drives most of the business
+- **Category B (1,488 SKUs, 31%)** contributed 15% of revenue (£4.14M) — 
+  moderate priority for inventory control
+- **Category C (2,972 SKUs, 63%)** contributed just 5% of revenue (£1.38M) — 
+  lowest priority, can run leaner reorder rules
+- **95.4% of SKUs** were flagged for reorder under simulated stock levels — 
+  a result of the narrow simulated stock range (1–19 days of stock), not an 
+  actual shortage. With real stock data, this number would likely be lower
+- **Estimated inventory value: £378.17K** across all products, based on 
+  simulated stock × historical average selling price
 
+## Recommendations
+- Prioritize Category A first. These 1,171 SKUs (25% of catalog) drive 80% of revenue (£22.05M) — reorder accuracy matters most here, since a stockout on these products has the biggest revenue impact.
+- Loosen control on Category C. 2,972 SKUs (63% of catalog) contribute just 5% of revenue (£1.38M) — tight reorder monitoring here isn't worth the operational effort; simpler, less frequent review is enough
+- Replace simulated stock with real inventory data. The 95.4% reorder-flag rate is inflated by the stock simulation assumption (1–19 days of stock range), not a real shortage. Connecting this to actual warehouse/ERP data would make the reorder signal trustworthy for real decisions.
+- Validate the 7-day lead time assumption. This was a placeholder due to missing supplier data. Real lead times likely vary by product — using actual figures would make safety stock and reorder points meaningfully more accurate.
+- Improve demand variability calculation. Current variability only considers days with sales. Including zero-sale days would likely raise variability estimates for slow-moving products, giving more realistic safety stock for those SKUs.
+- 
 ## Files
 - `online_retail_II.csv`- Raw dataset
 - `cleaned_retail.csv` - Cleaned transaction data
