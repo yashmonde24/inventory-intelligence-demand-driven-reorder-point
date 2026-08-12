@@ -77,3 +77,6 @@ in analytics projects.
 - `final_inventory_with_abc.csv` - Final analysis with reorder points and ABC tags
 - `Insights Visualization.csv` - Power BI dashboard file
 
+## Outcomes Preview 
+- Dashboard : https://github.com/yashmonde24/inventory-intelligence-demand-driven-reorder-point/blob/main/powerbi/Dashboard.pdf
+
