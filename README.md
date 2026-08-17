@@ -70,10 +70,6 @@ reorder point — though this needs a caveat, covered in Section 6.
 - **Unit price:** estimated as revenue ÷ quantity sold, since there's no 
   direct cost column in the source data
 
-These aren't hidden — they're the honest boundaries of what this dataset 
-can support. Every one of them is a clear next step if this were handed 
-off to a live business.
-
 ## 7. Future Enhancements
 - Replace simulated stock with a real, live inventory feed
 - Bring in actual supplier lead times instead of a fixed assumption
